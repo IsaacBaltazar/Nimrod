@@ -41,3 +41,19 @@ bajo. Ej. nombre_usuario, nombre_completo, etc.
 - Nombres descriptivos: Los nombres de las variables deben reflejar el contenido de la variable. Ej. no usar e, sino 
 edad. No usar n, sino nombre, etc.
 - Evitar nombres de un sólo caracter, ya que no son descriptivos y pueden ser confusos. 
+
+### Tipos de datos
+
+Python es un lenguaje de tipado dinámico, por lo que no hay necesidad de indicar el tipo de la variable al momento de 
+declararla.
+
+Los valores que pueden almacenar las variables son de distintos tipos, como:
+- Números (int): Son números sin la parte decimal, Ej 42, -109.
+- Números con punto flotante (float): ej 3.141569, -0.001.
+- Cadenas de texto (str): secuencia de caracteres, ej 'Hola mundo'.
+- Booleanos: almacenan un valor lógico de verdadero (True) o falso (False), este tipo de valores se usan para 
+controlar el flujo de un programa.
+- None: Es un tipo especial en Python que representa ausencia de valor.
+
+
+
