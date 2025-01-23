@@ -18,12 +18,12 @@ su nombre, variables.
 
 Para cambiar o modificar el valor de una variable solo es necesario volver a llamarla e igualarla a un nuevo valor.
 
-´´´
+```
 edad = 28
 print(edad)
 edad = 30
 print(edad)
-´´´
+```
 
 En python las variables son de tipo dinámico, esto es, pueden cambiar el tipo de dato que almacenan.
 
@@ -55,5 +55,6 @@ Los valores que pueden almacenar las variables son de distintos tipos, como:
 controlar el flujo de un programa.
 - None: Es un tipo especial en Python que representa ausencia de valor.
 
+## Constantes en Python
 
 
