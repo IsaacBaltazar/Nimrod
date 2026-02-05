@@ -93,6 +93,10 @@ cadena1 = "Hola Mundo"
 Los caracteres de una cadena están indexados de manera secuencial.
 Por lo tanto, podemos acceder a cada caracter indicando el índice del caracter que deseamos recuperar.
 
+### Cadenas Multilínea
+
+Para definir cadenas multilínea se utilizan triples comillas (""" o '''), de igual manera se deben cerrar con el mismo tipo de comilla triple.
+
 ### Inmutabilidad de una cadena
 
 Una vez que se crea una cadena, los caractéres dentro de ella no pueden ser modificados.
@@ -176,6 +180,11 @@ lista = datos.split(',')
 print(lista) # ['Juan', '30', 'México']
 ```
 
+### Slicing de cadenas
+
+Podemos obtener subcadenas dividiendo nuestra cadena original por "rebanadas".
+(Ver archivo de ejemplos)
+
 ## Conversión de tipos de datos
 
 La conversión de tipos de datos, también conocida como casting, es una técnica para manipular datos que no están en el tipo requerido.
@@ -185,3 +194,178 @@ Podemos hacer conversiones desde y hacia distintos tipos de datos:
 - Convertir a flotante: función float()
 - Convertir a cadena: función str()
 - Convertir a booleano: función bool()
+
+### Función bool()
+
+Es el mecanismo de Python para determinar la "existencia" o el "Vacío" de un dato. Nos devuelve un valor booleano, True o False.
+
+Falsy:
+
+- 0 (Cero en variables de tipo int o Float)
+- "" (Un string vacío)
+- [] (Una lista vacía)
+- None (Ausencia de valor)
+
+Truthy
+
+Cualquier cosa que "Existe".
+
+- 1, -5, 3.14 (No cero)
+- "hola", " " (Espacio)
+- [0] (Lista con datos)
+- True
+
+## Entrada de datos
+
+¿Qué es input()?
+Es la función que permite que tu programa deje de hablar y empiece a escuchar. Esta función pausa la ejecución del código y espera a que el usuario escriba y presione ENTER. Después sigue ejecutando el código.
+Para ello necesitamos una variable que atrape lo que el usuario escriba.
+
+```python
+# Estructura básica para Input
+# variable = input("Mensaje para el usuario: ")
+nombre = input("Escribe tu nombre: ")
+print("Hola " + nombre)
+```
+
+## Generación de valores aleatorios
+
+La función randint(), que es parte del módulo 'random', nos permite generar números aleatorios.
+randint(a,b) devuelve un número aleatorio entre a y b, incluyendo estos valores.
+Es necesario importar en primer lugar el módulo random antes de usar la función randint.
+Para importar un módulo usamos la sintaxis:
+
+```python
+import random
+numero = randint(0,9)
+print(numero)
+```
+
+## Operadores en Python
+
+Son símbolos especiales que están diseñados para realizar operaciones específicas:
+
+- Operadores aritméticos: Permiten realizar cálculos matemáticos básicos, como suma, resta, multiplicación o división.
+- Operadores de asignación: Se utilizan para asignar valores a variables.
+- Operaodres de comparación: Se utlizan para comparar un valor con otro.
+- Operadores lógicos: Se utilizan para combinar expresiones condicionlaes o lógicas.
+- Operadores de identidad: Se utilizan para comparar si dos variables son el mismo objeto.
+- Operadores de membresía: Se utilizan para probar si una secuencia (Ej. una subcadena) se presenta en un objeto.
+
+### Operadores aritméticos
+
+Los operadores aritméticos nos permiten realizar cálculos matemáticos básicos entre números:
+
+- Suma (+): Suma dos operandos.
+- Resta (-): Resta dos operandos.
+- Multiplicación (*): Multiplica dos operandos.
+- División (/): Divide el primer operando entre el segundo. Devuelve como resultado un valor flotante.
+- División entera (//): Divide el primer operando entre el segundo. Resulta un tipo entero.
+- Módulo (%): Regresa el residuo de la división.
+- Exponente (**): Eleva el primer operando a la potencia del segundo.
+
+### Operadores de Asignación
+
+Se utiliza para asignar un valor a una variable y se utiliza el caracter (=)
+
+```python
+# Sintaxis del operador de asignación
+variable = valor
+# Ejemplo del operador de asignación
+numero = 10
+texto = "Hola, mundo"
+```
+
+En Python también tenemos la asignación múltiple, lo que nos permite asignar valores a varias variables en una sola línea de código. El código es más compacto y fácil de leer:
+
+```python
+# Sintaxis de asignación múltiple
+variable1, variable2 = valor1, valor2
+# Ejemplo de asignación múltiple
+a, b, c = 10, 'Saludos', 14.5
+```
+
+En Python también contamos con la asignación encadenada. Esto permite asignar el mismo valor a múltiples variables.
+
+```python
+# Sintaxis de asignación encadenada
+variable1 = variable2 = ... = valor
+# Ejemplo. Inicializar contadores
+contador1 = contador2 = 0
+```
+
+### Operadores de Asignación compuestos
+
+Los operadores de asignación compuesto combinan una operación aritmética con una asignación, haciendo las operaciones más conscisas
+Los operadores pueden ser +=, -=, *=, /=, etc.
+operador =
+
+```python
+# Sintaxis operador Asignación compuesto
+variable OPERADOR= valor
+# Ejemplo operador de asignación compuesto
+contador = 0
+contador += 1 # contador = contador + 1
+```
+
+### Operadores de comparación
+
+Los operadores de comparación se utilizan para comparar dos valores.
+El resultado siempre es un valor booleano 'True' o 'False', dependiendo de si la condición se cumple o no.
+
+```python
+# operador de igualdad (==) compara si dos valores son iguales
+# Sintaxis del operador de igualdad ==
+a == b
+# Ejemplo 
+print(5 == 5) # True
+print(5 == 6) # False
+
+# Operador distinto (!=) Compara si dos valores son distintos
+# Sintaxis !=
+a != b
+# Ejemplo
+print(5 != 5) # False
+print(5 != 6) # True
+
+# Operador menor que (<)
+print(3 < 5) # True
+print(5 < 3) # False
+
+# Operador menor o igual que (<=)
+print(3 <= 5) # True
+print(5 <= 5) # True
+print(6 <= 5) # False
+
+# Operador mayor que (>)
+print(5 > 3) # True
+print(3 > 5) # False
+
+# Operador mayor o igual que (>=)
+print(5 >= 3) # True
+print(5 >= 5) # True
+print(3 >= 5) # False
+```
+
+### Operadores Lógicos
+
+Los operadores lógicos se utilizan para realizar operaciones lógicas con valores booleanos:
+
+```python
+# Operador lógico and, devuelve True si ambos operandos son verdaderos
+# Ejemplo
+exp1 = False
+exp2 = True
+print(exp1 and exp2) # False
+
+# Operador lógico or, devuelve True si cualquiera de los operandos es verdadero
+# Ejemplo 
+exp1 = False
+exp2 = True
+print(exp1 or exp2) # True
+
+# Operador lógico not, invierte el valor del operando es un operador unario
+# Ejemplo
+exp1 = False
+print(not exp1) # True
+```
